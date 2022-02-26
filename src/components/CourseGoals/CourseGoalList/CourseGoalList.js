@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./CourseGoalList.css";
 import CourseGoalItem from "../CourseGoalItem/CourseGoalsItem";
 const CourseGoalList = (props) => {

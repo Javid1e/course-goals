@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import CourseInput from "./components/CourseGoals/CourseInput/CourseInput";
 import CourseGoalList from "./components/CourseGoals/CourseGoalList/CourseGoalList";
@@ -37,10 +36,17 @@ const App = () => {
   return (
     <div>
       <section id="goal-form">
-        <CourseInput onAddGoal={addGoalHandler}></CourseInput>
+        <CourseInput onAddGoal={addGoalHandler} />
       </section>
       <section id="goals">
-        <CourseGoalList></CourseGoalList>
+        {content}
+        {/* {courseGoals.length > 0 && (
+          <CourseGoalList
+            items={courseGoals}
+            onDeleteItem={deleteItemHandler}
+          />
+        ) // <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
+        } */}
       </section>
     </div>
   );
